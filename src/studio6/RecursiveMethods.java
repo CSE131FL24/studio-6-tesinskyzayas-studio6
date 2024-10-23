@@ -12,11 +12,23 @@ public class RecursiveMethods {
 	 *         ...)
 	 */
 	public static double geometricSum(int n) {
+		double baseCase = (Math.pow(0.5,  n));
+		double sum = 0.0;
+		if (n < 1) {
+//			for (int power = 1; power <= n-1; ++power) {
+//				sum = sum + Math.pow(0.5, power);
+			return sum;
+		}
+			else {
+				sum = baseCase + geometricSum(n-1);
+			}
+		return sum;
+	}
+			
 		
 			// FIXME compute the geometric sum for the first n terms recursively
-			return 0;
-		
-	}
+		//	return 0;	
+			
 	
 	/**
 	 * @param xCenter                       x-coordinate of the center of the circle
